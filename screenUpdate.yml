@@ -1,0 +1,13 @@
+---
+
+- name: Update screen
+  hosts: webservers
+  remote_user: mjd
+  become: yes
+
+  tasks: 
+    - name: make sure screen is installed and current
+      apt:
+        name: screen
+        state: latest
+... 
