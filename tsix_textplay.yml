@@ -1,0 +1,15 @@
+---
+ 
+ - name: Create File
+   hosts: webservers
+   remote_user: tsix
+   
+
+   tasks: 
+    - name: create text file
+      shell: echo "This is a small text file" > ~/small.txt
+    - name: append
+      shell: echo "This is an appended text file" >> ~/small.txt
+    - name: date the file
+      raw: date >> ~/small.txt
+...
