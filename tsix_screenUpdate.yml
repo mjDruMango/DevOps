@@ -1,0 +1,13 @@
+---
+
+ - name: update screen
+   hosts: webservers
+   remote_user: tsix
+   become: yes
+
+   tasks:
+    - name: install and update screen
+      apt: 
+       name: screen
+       state: latest
+...
