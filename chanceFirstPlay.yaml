@@ -1,0 +1,15 @@
+# A playbook to update and upgrade a ubuntu server
+# file created by Chance
+#
+---
+- name: Update all
+  hosts: webservers
+  remote_user: chance
+  become: yes
+
+  tasks:
+  - name: update then upgrade
+    apt:
+      update_cache: yes
+      upgrade: yes
+...
